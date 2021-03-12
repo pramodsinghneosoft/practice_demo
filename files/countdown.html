@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script type="text/javascript">
+    var myTimer;
+    
+    var c = 20;
+    
+    var countValue = c;
+    function clock(count,count1) {
+        if(count1!=1){
+            if(countValue==count){
+            
+            myTimer  = setInterval(myClock, 1000);
+    
+
+    function myClock() {
+      
+
+        countValue = --c;
+
+      document.getElementById("demo").innerHTML = countValue;
+      if (c == 0) {
+        clearInterval(myTimer);
+      }
+    }
+   
+  }else{
+            
+            myTimer  = setInterval(myClock, 1000);
+
+
+            function myClock() {    
+    countValue = --c;
+
+  document.getElementById("demo").innerHTML = countValue;
+  if (c == 0) {
+    clearInterval(myTimer);
+  }
+}
+        
+    }
+        }else{
+            c = count;
+            myTimer  = setInterval(myClock, 1000);
+    
+
+    function myClock() {
+      
+
+        countValue = --c;
+
+      document.getElementById("demo").innerHTML = countValue;
+      if (c == 0) {
+        clearInterval(myTimer);
+      }
+    }
+        }
+     
+        }
+  
+  function myStopFun(){
+        clearInterval(myTimer);
+    }
+    function restartFun(){
+        clearInterval(myTimer);
+        
+        clock(20,1);
+    }
+            
+            </script>
+    </head>
+    <body>
+        <h2>HTML part</h2>
+        <h2>Countdown Timer</h2>
+        
+        <p id="result"></p>
+        <h1 id="demo"></h1>
+        <video width="250" height="200" controls>
+            <source src="https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4" type="video/mp4">
+            
+            
+          </video>
+    </body>
+</html>
+
+
+
+
